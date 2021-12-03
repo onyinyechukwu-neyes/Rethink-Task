@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Open+Sans&display=swap");
+
+.about {
+  background-color: rgb(134, 18, 57);
+  height: 400px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.about h1 {
+  font-family: Nunito Sans;
+  font-size: 50px;
+  font-weight: 600;
+  color: whitesmoke;
+  animation: fadeInDown;
+  animation-duration: 2s;
+}
