@@ -9,15 +9,18 @@ body {
 .App {
   background-image: url("../images/background.png");
   height: 900px;
+  width: 100%;
   background-repeat: no-repeat;
 }
 
 /* HEADER COMPONENT CSS */
 .header {
-  width: auto;
+  width: 100%;
   height: 30px;
   left: 0px;
   top: 0px;
+  position: sticky;
+  z-index: 2;
 }
 
 .nav {
@@ -50,7 +53,6 @@ body {
   top: 26px;
   list-style-type: none;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
 }
 
@@ -104,7 +106,7 @@ body {
 /* CONTENT COMPONENT CSS */
 .title {
   position: absolute;
-  width: 595px;
+  width: 50%;
   height: 20px;
   left: 140px;
   top: 185px;
@@ -316,4 +318,93 @@ body {
   display: flex;
   align-items: center;
   color: #525f7f;
+}
+
+.navbar {
+  height: 80px;
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  font-size: 16px;
+  display: none;
+}
+
+.nav-links {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  list-style: none;
+}
+
+.nav-link {
+  text-decoration: none;
+  transition: 0.3s all;
+}
+
+.nav-icon {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  position: static;
+}
+
+@media only screen and (max-width: 610px) {
+  .custom-class,
+  .group,
+  .btn {
+    display: none;
+  }
+
+  .content-container {
+    left: 40px;
+    top: 85px;
+  }
+
+  .content,
+  .content2 {
+    left: 10%;
+  }
+
+  .nav-icon {
+    display: flex;
+  }
+
+  /* MobileNav CSS */
+  .navbar {
+    display: flex;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    text-align: center;
+    padding-left: 0;
+    width: 60%;
+    height: 100vh;
+    left: -100%;
+    top: 49px;
+    transition: 2s all ease-out;
+    text-decoration: none;
+  }
+
+  .nav-links.active {
+    background-color: burlywood;
+    left: 0;
+    transition: 2s all ease-in;
+  }
+
+  .nav-item {
+    padding: 10px;
+    width: 91%;
+    height: 40px;
+    padding-top: 30px;
+    border-bottom: 1px solid black;
+    list-style-type: none;
+  }
+  .logo {
+    width: 100%;
+    margin-right: 30px;
+  }
 }
