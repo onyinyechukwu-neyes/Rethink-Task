@@ -8,6 +8,7 @@ const Header = () => {
     <div className="header">
       <nav className="nav">
         <div className="frame">
+          <MobileNav />
           <div className="logo">
             <img src="images/logo-wo-subtitle.png" alt="" />
           </div>
@@ -42,8 +43,6 @@ const Header = () => {
               <span className="btnText">LogOut</span>
             </button>
           )}
-
-          <MobileNav />
         </div>
       </nav>
     </div>

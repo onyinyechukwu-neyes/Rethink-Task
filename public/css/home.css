@@ -321,12 +321,10 @@ body {
 }
 
 .navbar {
-  height: 80px;
-  width: 50%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+
   font-size: 16px;
   display: none;
 }
@@ -351,11 +349,17 @@ body {
 
 @media only screen and (max-width: 610px) {
   .custom-class,
-  .group,
-  .btn {
+  .group {
     display: none;
   }
 
+  .btn {
+    height: 30px;
+  }
+
+  .frame {
+    padding: 17px 40px;
+  }
   .content-container {
     left: 40px;
     top: 85px;
@@ -368,6 +372,7 @@ body {
 
   .nav-icon {
     display: flex;
+    margin-right: 20px;
   }
 
   /* MobileNav CSS */
